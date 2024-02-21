@@ -1,12 +1,13 @@
 .active {
-  color: #f5a524;
+  color: #0077b9;
   font-weight: 700;
   font-size: large;
 }
 
 .notActive {
-  color: blue;
+  color: #0077b9;
   font-size: large;
+  font-weight: 700;
 }
 
 .notActive:hover {
@@ -17,7 +18,7 @@
   font-family: "Roboto";
 }
 
-.hbar{
+.hbar {
   background-color: #f5a524;
   filter: drop-shadow(0 0 0.05rem #f5a524);
   height: 5rem;
@@ -25,7 +26,7 @@
   margin-left: 0.5rem;
 }
 
-.NavDiv::after{
+.NavDiv::after {
   content: "";
   height: 0.1rem;
   border-radius: 1rem;

@@ -16,14 +16,16 @@ import {
   AccordionItem,
   Listbox,
   ListboxItem,
+  NavbarBrand,
 } from "@nextui-org/react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { FaPhoneAlt } from "react-icons/fa";
+import { FaLocationPin } from "react-icons/fa6";
 // Local Files
 import "./NavBar.css";
-import logo from "../globalAssets/logo.svg";
+import logo from "../globalAssets/clipart2359735.png";
 import { RootState } from "../store/store";
 import { updateNavStatus } from "../store/navOpenStatusSlice";
 
@@ -53,29 +55,28 @@ const NavBar = () => {
               className="lg:hidden text-white"
             />
             <Link to="../Home">
-              <Image width={150} src={logo} alt="logo" radius="none" className="hidden lg:block" />
+              <p className="text-white font-bold text-xl w-[12rem]">PLUMBING & REPAIR</p>
             </Link>
             <div className="hbar hidden lg:block"></div>
-            <p className="text-white font-bold text-xl mx-4">IT'S 06:31:10 AM AND WE'RE OPEN</p>
+            <p className="text-white font-bold text-xl mx-4 w-[10rem]">WE'RE OPEN</p>
           </div>
         </NavbarContent>
-        <NavbarContent className="hidden lg:flex" justify="center"></NavbarContent>
-        <NavbarContent className="lg:hidden logo">
-          <Link to="../Home">
-            <Image width={120} src={logo} alt="logo" radius="none" />
-          </Link>
-        </NavbarContent>
-
         <NavbarContent justify="end">
           <NavbarItem className="hidden lg:flex">
             <Link to="../Auth">
-              <Button color="warning" variant="bordered" radius="none" startContent={<FaPhoneAlt />}>
+              <Button
+                color="warning"
+                variant="shadow"
+                radius="none"
+                startContent={<FaPhoneAlt />}
+                className="opacity-100 bg-[#0077b9]"
+              >
                 (909) 316-5079
               </Button>
             </Link>
           </NavbarItem>
         </NavbarContent>
-        <NavbarMenu className="bg-[#28292b] mt-[1rem]">
+        {/* <NavbarMenu className="bg-[#28292b] mt-[1rem]">
           {menuItems.map((item, index) => {
             if (item === "Services") {
               return (
@@ -142,7 +143,7 @@ const NavBar = () => {
               );
             }
           })}
-        </NavbarMenu>
+        </NavbarMenu> */}
       </Navbar>
       <Navbar
         isMenuOpen={navOpenStatus}
@@ -150,22 +151,25 @@ const NavBar = () => {
         className="dark h-[10rem] nav p-[3rem] rounded-lg bg-white"
         maxWidth="full"
       >
+        <NavbarBrand>
+          <Link to="../Home">
+            <Image width={120} src={logo} alt="logo" radius="none" className="" />
+          </Link>
+        </NavbarBrand>
         <NavbarContent>
           <NavbarMenuToggle aria-label={navOpenStatus ? "Close menu" : "Open menu"} className="lg:hidden text-white" />
         </NavbarContent>
-        <NavbarContent className="lg:hidden logo">
-          <Link to="../Home">
-            <Image width={120} src={logo} alt="logo" radius="none" />
-          </Link>
-        </NavbarContent>
 
-        <NavbarContent className="hidden lg:flex" justify="center">
+        <NavbarContent className="hidden lg:flex" justify="start">
           <NavbarItem>
             <Link
               to="../Home"
               className={curTab === "Home" ? "active navActive flex flex-col px-[1rem]" : "notActive px-[1rem]"}
             >
-              Home
+              <div className="flex flex-row gap-x-6">
+                <FaLocationPin className="text-red-600" />
+                INLAND EMPIRE, CA
+              </div>
             </Link>
           </NavbarItem>
           <NavbarItem>
@@ -173,7 +177,7 @@ const NavBar = () => {
               to="../Contact"
               className={curTab === "Contact" ? "active navActive flex flex-col px-[1rem]" : "notActive px-[1rem]"}
             >
-              Contact Us
+              Call 562-667-4755
             </Link>
           </NavbarItem>
         </NavbarContent>
@@ -181,13 +185,13 @@ const NavBar = () => {
           <NavbarItem className="hidden lg:flex">
             <div className="flex flex-col gap-y-2">
               <Link to="../Auth">
-                <Button color="warning" variant="bordered" radius="none" className="px-[3.9rem]">
+                <Button
+                  color="warning"
+                  variant="bordered"
+                  radius="none"
+                  className="px-[3.9rem] bg-[#0077b9] text-white"
+                >
                   CALL US NOW
-                </Button>
-              </Link>
-              <Link to="../Auth">
-                <Button color="warning" variant="solid" radius="none" className="font-semibold">
-                  REQUEST AN APPOINTMENT
                 </Button>
               </Link>
             </div>
