@@ -57,7 +57,7 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="px-[1rem] sm:px-[3rem] py-[5rem] bg-[#191f22]">
+    <div className="px-[1rem] sm:px-[3rem] py-[5rem]">
       <h1 className="font-['Roboto'] text-[3rem] text-center mx-auto mb-[2rem] font-bold text-white">
         Explore our newest
       </h1>

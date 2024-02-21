@@ -23,14 +23,14 @@ const Home = () => {
 
   return (
     <div>
-      <Popover />
+      {/* <Popover /> */}
       <HeroSection />
-      <Testimonials />
       <Help />
-      <Protection />
       <Join />
-      <Achievement />
+      <Protection />
       <Youtube />
+      <Testimonials />
+      <Achievement />
     </div>
   );
 };

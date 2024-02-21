@@ -27,7 +27,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Navigate to="/Home" />} />
         <Route path="/Home" element={<Home />} />
-        <Route path="/About" element={<About />} />
+        {/* <Route path="/About" element={<About />} />
         <Route path="/Privacy" element={<Privacy />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/FAQ" element={<FAQ />} />
@@ -35,7 +35,7 @@ function App() {
         <Route path="/Investment" element={<Investment />} />
         <Route path="/Crypto" element={<Crypto />} />
         <Route path="/Options" element={<Options />} />
-        <Route path="/Retirement" element={<Retirement />} />
+        <Route path="/Retirement" element={<Retirement />} /> */}
         <Route path="*" element={<Navigate to="/Home" />} />
       </Routes>
       {curTab === "Auth" ? null : <Footer />}
