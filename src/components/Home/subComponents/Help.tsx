@@ -60,7 +60,7 @@ const Help = () => {
           </div>
         </div>
       </div>
-      <div className="border-2 w-[80rem]">
+      <div className="border-2 w-[80rem] lg:inline-block hidden">
         <img
           src="https://img.freepik.com/free-photo/man-kneeling-down-touching-sink-inspecting-pipes_259150-58251.jpg?w=360&t=st=1708517429~exp=1708518029~hmac=4520fec27ca6ea8675914803979b610f81e3855b260cbbd4433bb8101a2b5137"
           alt=""
