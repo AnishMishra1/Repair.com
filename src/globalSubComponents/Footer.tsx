@@ -9,57 +9,22 @@ import { IoLocation } from "react-icons/io5";
 
 // Local Files
 import "./Footer.css";
-import logo from "../globalAssets/logo.svg";
+import logo from "../globalAssets/clipart2359735.png";
 
-const contactInfo = [
-  {
-    name: "Phone",
-    value: "+1 (888) 891-7176",
-    icon: <FaPhone />,
-  },
-  {
-    name: "Email",
-    value: "support@investnow.com",
-    icon: <MdEmail />,
-  },
-  {
-    name: "Address",
-    value: "London Eye, UK",
-    icon: <IoLocation />,
-  },
-];
 
-const footerLinks = [
-  {
-    type: "Navigation",
-    data: [
-      { key: "home", value: "Home" },
-      { key: "about", value: "About" },
-      { key: "contact", value: "Contact" },
-      { key: "faq", value: "FAQ" },
-      { key: "Privacy", value: "Privacy" },
-    ],
-  },
-  {
-    type: "Quick Links",
-    data: [
-      { key: "investment", value: "Investment" },
-      { key: "crypto", value: "Crypto" },
-      { key: "options", value: "Options" },
-      { key: "retirement", value: "Retirement" },
-      
-    ],
-  },
-];
+
+
 
 const Footer = () => {
   return (
-    <div className="h-auto bg-[#0077B9] text-white flex flex-col md:flex-row justify-end items-center p-[5rem] gap-[8rem]">
-      <div className="flex flex-col justify-start items-start px-[3rem]">
+    <div className="h-auto bg-[#0077B9] text-white flex flex-col md:flex-row justify-start items-start p-[2rem] lg:p-[4rem] xl:gap-[8rem] md:gap-[4rem]">
+      <div className="flex flex-col justify-start items-start lg:px-[3rem] px-[1rem]">
         <div className="py-[1rem]">
-          <h1 className="p-">Business Hours</h1>
+          <h1 className="text-2xl font-bold font-sans">Business Hours</h1>
+          <div className="h-[0.1rem] w-[5rem] bg-red-500"></div>
         </div>
-        <div>
+
+        <div className="text-normal font-sans">
           <ul>Mon: 8:00 AM – 8:00 PM</ul>
           <ul>Tue: 8:00 AM – 8:00 PM</ul>
           <ul>Wed: 8:00 AM – 8:00 PM</ul>
@@ -69,16 +34,33 @@ const Footer = () => {
           <ul>Sun: 8:00 AM – 8:00 PM</ul>
         </div>
       </div>
-      <div className="flex flex-col justify-start items-start px-[3rem]">
-        <div>Business Hours</div>
+      <div className="flex flex-col justify-start items-start lg:px-[3rem] px-[1rem]">
+        <div className="py-[1rem] ">
+          <h1 className="text-2xl font-bold font-sans">Contact</h1>
+          <div className="h-[0.1rem] w-[5rem] bg-red-500"></div>
+        </div>
+        <div className="text-normal font-sans">
+          <ul>
+            1616 E Francis St, Suite G Ontario, <br />
+            California 91761
+          </ul>
+          <ul>(909)296-4817</ul>
+          <ul>(909)296-4817</ul>
+          <div className="py-[1rem]">
+            <button className="bg-[#AD3840] font-bold py-[0.8rem] px-[1.5rem]">Blogs</button>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex flex-col justify-start items-start lg:px-[3rem] px-[1rem] mt-[1rem] ">
+        <div className="h-[10rem] w-[10rem]">
+          <img src={logo} alt="" />
+        </div>
         <div>
-          <ul>Mon: 8:00 AM – 8:00 PM</ul>
-          <ul>Mon: 8:00 AM – 8:00 PM</ul>
-          <ul>Mon: 8:00 AM – 8:00 PM</ul>
-          <ul>Mon: 8:00 AM – 8:00 PM</ul>
-          <ul>Mon: 8:00 AM – 8:00 PM</ul>
-          <ul>Mon: 8:00 AM – 8:00 PM</ul>
-          <ul>Mon: 8:00 AM – 8:00 PM</ul>
+          <h3 className="text-white font-sans text-[1.2rem]">
+            Plumbing and Repair
+            <br />
+          </h3>
         </div>
       </div>
     </div>
