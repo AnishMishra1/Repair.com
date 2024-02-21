@@ -45,7 +45,7 @@ const NavBar = () => {
       <Navbar
         isMenuOpen={navOpenStatus}
         onMenuOpenChange={setIsMenuOpen}
-        className="dark  h-[1rem] bg-transparent nav px-[3rem] py-[1.5rem] opacity-70"
+        className="dark  h-[1rem] bg-transparent nav px-[3rem] py-[1.5rem] bg-[#0077B9]"
         maxWidth="full"
       >
         <NavbarContent>
@@ -64,13 +64,7 @@ const NavBar = () => {
         <NavbarContent justify="end">
           <NavbarItem className="hidden lg:flex">
             <Link to="../Auth">
-              <Button
-                color="warning"
-                variant="shadow"
-                radius="none"
-                startContent={<FaPhoneAlt />}
-                className="opacity-100 bg-[#0077b9]"
-              >
+              <Button color="warning" radius="sm" variant="shadow" startContent={<FaPhoneAlt />}>
                 (909) 316-5079
               </Button>
             </Link>
