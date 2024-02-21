@@ -1,49 +1,37 @@
 import { Button } from "@nextui-org/react";
 
-const data = [
-  {
-    title: "We strive diligently to safeguard and ensure the security of your valuable data.",
-    thumbnail:
-      "https://images.unsplash.com/photo-1604398525509-ce4af98fdb23?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    title: "We safeguard your account against unauthorized access and ensure its security.",
-    thumbnail:
-      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    title: "Enhancing account security with robust multi-factor authentication for all user accounts.",
-    thumbnail:
-      "https://images.unsplash.com/photo-1584433144859-1fc3ab64a957?q=80&w=1930&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    title: "We're here for you around the clock. Count on us, anytime, anywhere.",
-    thumbnail:
-      "https://images.unsplash.com/photo-1550534791-2677533605ab?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-];
-
 const Protection = () => {
   return (
-    <div className="px-[1rem] md:px-[2rem] lg:px-[3rem] py-[5rem] flex flex-col items-center bg-[#052814] gap-[3rem]">
-      <p className="text-white font-semibold text-[4rem] max-w-[50rem] text-center leading-[4rem]">
-        InvestNow Protection Guarantee
-      </p>
-      <Button color="warning" radius="none">
-        Learn more
-      </Button>
-      <div className="grid sm:grid-cols-2 gap-[3rem]">
-        {data.map((d, index) => (
-          <div className="flex flex-col items-center gap-[2rem]">
-            <div
-              className="h-[10rem] w-[10rem] bg-no-repeat bg-cover bg-center rounded-full"
-              style={{
-                backgroundImage: `url(${d.thumbnail})`,
-              }}
-            ></div>
-            <p className="max-w-[15rem] text-white text-center">{d.title}</p>
-          </div>
-        ))}
+    <div className="flex flex-row items-center justify-center bg-gray-200 h-auto ">
+      <div className="md:px-[5rem] py-[2rem] px-[1rem]">
+        <div className="py-[1rem]">
+          <h1 className="text-blue-500 text-3xl font-sans font-semibold">
+            Experiencing Frequent Plumbing Problems? Our Fast and Affordable Plumbing Repair Team Has Your Back
+          </h1>
+        </div>
+        <div className="py-[0.5rem] ">
+          <p className="text-black font-serif ">
+            What’s worse than having a plumbing problem? Not being able to find a quick and affordable plumbing repair
+            company. Fortunately, residents in Upland County won’t have to break a sweat. With AYS Plumbing & Rooter in
+            your backyard, your repair won’t break the bank.
+          </p>
+          <p className="text-black font-serif py-[0.5rem]">
+            If clogged sink drains are the root cause of your plumbing problems, put the snake away and give our
+            full-service plumbing repair team a call for expert{" "}
+            <span className="text-yellow-600">drain cleaning services</span>. We can perform thorough{" "}
+            <span className="text-yellow-600">drain inspection services </span> to identify the severity of the blockage
+            in your plumbing system. If you need a fix that packs a bit more of a punch, our <span className="text-yellow-600">hydro jetting</span>{" "}
+            services are quick and easy and restore your drainage system without damaging what’s deep inside. Regardless
+            of what you need, our fast and affordable plumbing repair services in Upland, CA, can provide an effective
+            solution.
+          </p>
+        </div>
+      </div>
+      <div className="border-2 w-[120rem] mr-[1rem] lg:inline-block hidden">
+        <img
+          src="https://img.freepik.com/free-photo/plumber-with-his-arms-crossed_1368-515.jpg?w=360&t=st=1708518412~exp=1708519012~hmac=97f02fc1db130e7a140d5c335515e91b6366028cc164562fe92a6dcc6657854d"
+          alt=""
+        />
       </div>
     </div>
   );

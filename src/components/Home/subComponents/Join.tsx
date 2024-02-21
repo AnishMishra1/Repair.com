@@ -2,16 +2,35 @@ import { Button } from "@nextui-org/react";
 
 const Join = () => {
   return (
-    <div
-      className="h-[43rem] bg-no-repeat bg-cover bg-center p-[5rem] flex flex-col items-center justify-center"
-      style={{
-        backgroundImage: `url(https://images.unsplash.com/photo-1535350356005-fd52b3b524fb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)`,
-      }}
-    >
-      <p className="max-w-[50rem] text-[3.5rem] font-bold leading-[5rem] text-center">
-        Join A New <span className="text-[#F5A524] bg-black">&nbsp;Generation&nbsp;</span> Of &nbsp;
-        <span className="text-[#F5A524] bg-black">&nbsp;Investors&nbsp;</span> . InvestNow
-      </p>
+    <div className="bg-[#0077B9] h-auto p-[5rem]">
+      <div className="flex justify-center items-center">
+        <div className="flex flex-col justify-center items-center">
+          <div className="p-[1rem]">
+            <h1 className="text-center text-4xl font-sans font-semibold text-white">
+              Our Team Can Help You With All Your Bathroom & Kitchen Plumbing Repair Needs
+            </h1>
+          </div>
+          <div className="py-[0.5rem]">
+            <p className="text-center text-1xl text-white font-serif text-1xl">
+              There’s no point in a plumbing service if they don’t service your kitchens and bathrooms. These are the
+              two most common locations for plumbing problems, so why not get them serviced by a top-tier repair team?
+              At AYS Plumbing & Rooter, homeowners can fix major and minor plumbing problems with all appliances in
+              their kitchens and bathrooms. What does that include? Check out some of the biggest bathroom plumbing
+              repair needs we can solve:
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="text-white font-serif text-1xl py-[2rem]">
+        <ul className="list-disc">
+          <li>Dripping Bathroom Faucets</li>
+          <li>Dripping Bathroom Faucets</li>
+          <li>Dripping Bathroom Faucets</li>
+          <li>Dripping Bathroom Faucets</li>
+          <li>Dripping Bathroom Faucets</li>
+          <li>Dripping Bathroom Faucets</li>
+        </ul>
+      </div>
     </div>
   );
 };
