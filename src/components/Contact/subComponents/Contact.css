@@ -1,0 +1,7 @@
+.contactBg {
+  min-height: 40rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3) 20%, rgba(0, 0, 0, 0.2)), url("../assets/greenBg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

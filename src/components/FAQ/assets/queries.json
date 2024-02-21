@@ -1,0 +1,113 @@
+[
+  {
+    "question": "Q. What is the InvestNow Investment Security Guarantee?",
+    "answer": [
+      {
+        "data": {
+          "main": "Our InvestNow Investment Security Guarantee ensures complete coverage, addressing 100% of any losses in your InvestNow Investment accounts resulting from unauthorized activity. For detailed information, please visit InvestNow.com",
+          "points": []
+        },
+        "bullet": false
+      }
+    ]
+  },
+  {
+    "question": "Q. How much does it cost to work with InvestNow Investment?",
+    "answer": [
+      {
+        "data": {
+          "main": "Benefit from $0 online listed stock, option, and ETF trade commissions1,2. Explore thousands of non-load, no-transaction-fee mutual funds3. Collaborate with an InvestNow Investment Financial Consultant at no charge (note: additional account fees, fund expenses, and brokerage commissions may apply). Check our comprehensive pricing details for a full overview.",
+          "points": [
+            "Standard online $0 commission does not apply to over-the-counter (OTC) equities, transaction-fee mutual funds, futures, fixed-income investments, or trades placed directly on a foreign exchange or in the Canadian market. Options trades will be subject to the standard $0.65 per-contract fee. Service charges apply for trades placed through a broker ($25) or by automated phone ($5). Exchange process, ADR, and Stock Borrow fees still apply. See the InvestNow InvestNow Investment Pricing Guide for Individual Investors for full fee and commission schedules.",
+
+            "ETFs at InvestNow Investment & Co., Inc. ('InvestNow Investment') which are U.S. exchange-listed can be traded without a commission on buy and sell transactions made online in a InvestNow Investment account. Unlisted ETFs are subject to a commission. Please see pricing guide for additional information. InvestNow Investment does not receive payment to promote any particular ETF to its customers. InvestNow Investment's affiliate InvestNow InvestNow Investment Investment Management, Inc. ('CSIM') serves as investment advisor to the InvestNow Investment ETFs, which compensate CSIM out of the applicable operating expense ratios. The amount of the fees is disclosed in the prospectus of each ETF.",
+
+            "Trades in no load funds available through InvestNow Investment's Mutual Fund OneSource® service (including InvestNow Investment Funds), as well as certain other funds, are available without transaction fees when placed through InvestNow Investment.com or our automated phone channels. For each of these trade orders placed through a broker, a $25 service charge applies. InvestNow Investment's short-term redemption fee of $49.95 will be charged on redemption of funds purchased through Mutual Fund OneSource® service and held for 90 days or less. InvestNow Investment reserves the right to change the funds we make available without transaction fees and to reinstate fees on any funds. InvestNow InvestNow Investment & Co., Inc. receives remuneration from fund companies participating in the Mutual Fund OneSource service for recordkeeping and shareholder services and other administrative services. InvestNow Investment also may receive remuneration from transaction fee fund companies for certain administrative services."
+          ]
+        },
+        "bullet": true
+      }
+    ]
+  },
+  {
+    "question": "Q. How do I open an account?",
+    "answer": [
+      {
+        "data": {
+          "main": "Opening an account is simple and can be done online, by phone, or in one of over 300 branches. Click here to open an account online in about 10 minutes.",
+          "points": [
+            "Select your account type",
+            "Complete the application",
+            "Commence funding and investing",
+            "Contact us at +1 (888) 891-7176 ",
+            "Locate a branch"
+          ]
+        },
+        "bullet": true
+      }
+    ]
+  },
+  {
+    "question": "Q. What is risk in the context of investments?",
+    "answer": [
+      {
+        "data": {
+          "main": "In the context of investments, risk refers to the uncertainty or potential for financial loss.",
+          "points": [
+            "It encompasses the possibility that an investment may not perform as expected, leading to a negative impact on the investor's capital.",
+          "Various factors contribute to investment risk, including market fluctuations, economic conditions, and specific characteristics of the investment itself."]
+
+        },
+        "bullet": false
+      }
+    ]
+  },
+  {
+    "question": "Q. How can investors manage risk in their investment portfolios?",
+    "answer": [
+      {
+        "data": {
+          "main": "Investors can manage risk in their portfolios through diversification like:",
+          "points": [
+            "involves spreading investments across different asset classes to reduce the impact of poor performance in any single investment.",
+            "Setting realistic financial goals, conducting thorough research, and staying informed about market trends are also essential.",
+            "Additionally, employing risk management tools such as stop-loss orders and maintaining a balanced asset allocation can help mitigate potential losses."
+          ]
+        },
+        "bullet": true
+      },
+      {
+        "data": {
+          "main": "What is the relationship between risk and return in investments?",
+          "points": [
+            ""
+          ]
+        },
+        "bullet": false
+      }
+    ]
+  },
+  {
+    "question": "Q. What is the relationship between risk and return in investments?",
+    "answer": [
+      {
+        "data": {
+          "main": "The relationship between risk and return in investments is often described by the principle of risk-return tradeoff",
+          "points": [
+            "Generally, investments with higher potential returns tend to come with higher levels of risk. Investors must assess their risk tolerance and financial goals to find a suitable balance",
+
+            " While riskier investments may offer the potential for greater returns, they also pose a higher chance of losses. Diversification and thorough analysis play crucial roles in optimizing the risk-return profile of an investment portfolio"
+          ]
+        },
+        "bullet": true
+      },
+      {
+        "data": {
+          "main": "Open an InvestNow Investment Bank High Yield Investor Checking account or learn more.",
+          "points": []
+        },
+        "bullet": false
+      }
+    ]
+  }
+]
