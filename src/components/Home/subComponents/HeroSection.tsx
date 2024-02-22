@@ -10,8 +10,8 @@ import "./HeroSection.css";
 const HeroSection = () => {
   return (
     <div className="HeroSection flex items-center justify-center ">
-      <div className="p-[4rem] ">
-        <h1 className="text-white font-sans  text-center font-bold text-6xl">PLUMBING AND REPAIR</h1>
+      <div className="p-[2rem] mt-[5rem]">
+        <h1 className="text-white font-sans  text-center font-bold text-4xl md:text-6xl">PLUMBING AND REPAIR</h1>
 
         {/* <div className="py-[0.5rem]">
           <div className="h-[0.2rem] w-[10rem] bg-yellow-600 "></div>
