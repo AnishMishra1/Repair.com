@@ -41,28 +41,24 @@ const NavBar = () => {
   };
 
   return (
-    <div className="fixed px-[10rem] py-[1rem] w-full z-[500]">
+    <div className="fixed px-[0.4rem] md:px-[2rem] xl:px-[10rem] py-[1rem] w-full z-[500]">
       <Navbar
         isMenuOpen={navOpenStatus}
         onMenuOpenChange={setIsMenuOpen}
-        className="dark  h-[1rem] bg-transparent nav px-[3rem] py-[1.5rem] opacity-70"
+        className="dark h-[1rem] bg-white md:bg-transparent nav px-[3rem] py-[1.5rem] md:opacity-70 hidden md:flex"
         maxWidth="full"
       >
-        <NavbarContent>
+        <NavbarContent justify="start" className="">
           <div className="flex flex-row justify-center items-center gap-x-[0.2rem]">
-            <NavbarMenuToggle
-              aria-label={navOpenStatus ? "Close menu" : "Open menu"}
-              className="lg:hidden text-white"
-            />
-            <Link to="../Home">
+            <Link to="../Home" className="hidden md:flex">
               <p className="text-white font-bold text-xl w-[12rem]">PLUMBING & REPAIR</p>
             </Link>
             <div className="hbar hidden lg:block"></div>
-            <p className="text-white font-bold text-xl mx-4 w-[10rem]">WE'RE OPEN</p>
+            <p className="text-black md:text-white font-bold text-xl mx-4 w-[10rem]">WE'RE OPEN</p>
           </div>
         </NavbarContent>
         <NavbarContent justify="end">
-          <NavbarItem className="hidden lg:flex">
+          <NavbarItem>
             <Link to="../Auth">
               <Button
                 color="warning"
@@ -76,91 +72,25 @@ const NavBar = () => {
             </Link>
           </NavbarItem>
         </NavbarContent>
-        {/* <NavbarMenu className="bg-[#28292b] mt-[1rem]">
-          {menuItems.map((item, index) => {
-            if (item === "Services") {
-              return (
-                <NavbarMenuItem key={`${item}-${index}`}>
-                  <Accordion className="p-0" isCompact>
-                    <AccordionItem
-                      aria-label={item}
-                      title={item}
-                      classNames={{ title: curTab === item ? "active" : "notActive", content: "text-white" }}
-                    >
-                      <Listbox aria-label="Services" color="warning">
-                        <ListboxItem key="Investment" className="p-0" textValue="Investment">
-                          <Link
-                            style={{ display: "block", padding: "6px 8px" }}
-                            to={"./Investment"}
-                            onClick={setIsMenuOpen}
-                          >
-                            Investment
-                          </Link>
-                        </ListboxItem>
-                        <ListboxItem key="Crypto" className="p-0" textValue="Crypto">
-                          <Link
-                            style={{ display: "block", padding: "6px 8px" }}
-                            to={"./Crypto"}
-                            onClick={setIsMenuOpen}
-                          >
-                            Crypto
-                          </Link>
-                        </ListboxItem>
-                        <ListboxItem key="Options" className="p-0" textValue="Options">
-                          <Link
-                            style={{ display: "block", padding: "6px 8px" }}
-                            to={"./Options"}
-                            onClick={setIsMenuOpen}
-                          >
-                            Options
-                          </Link>
-                        </ListboxItem>
-                        <ListboxItem key="Retirement" className="p-0" textValue="Retirement">
-                          <Link
-                            style={{ display: "block", padding: "6px 8px" }}
-                            to={"./Retirement"}
-                            onClick={setIsMenuOpen}
-                          >
-                            Retirement
-                          </Link>
-                        </ListboxItem>
-                      </Listbox>
-                    </AccordionItem>
-                  </Accordion>
-                </NavbarMenuItem>
-              );
-            } else {
-              return (
-                <NavbarMenuItem key={`${item}-${index}`}>
-                  <Link
-                    className={curTab === item ? "active" : "notActive"}
-                    to={index === 5 ? "../Auth" : `../${item}`}
-                    onClick={setIsMenuOpen}
-                  >
-                    {item}
-                  </Link>
-                </NavbarMenuItem>
-              );
-            }
-          })}
-        </NavbarMenu> */}
       </Navbar>
       <Navbar
         isMenuOpen={navOpenStatus}
         onMenuOpenChange={setIsMenuOpen}
-        className="dark h-[10rem] nav p-[3rem] rounded-lg bg-white"
+        className="dark h-[10rem] nav md:p-[3rem] rounded-lg bg-white justify-between"
         maxWidth="full"
       >
         <NavbarBrand>
           <Link to="../Home">
-            <Image width={120} src={logo} alt="logo" radius="none" className="" />
+            <Image width={80} src={logo} alt="logo" radius="none" className="" />
           </Link>
         </NavbarBrand>
-        <NavbarContent>
-          <NavbarMenuToggle aria-label={navOpenStatus ? "Close menu" : "Open menu"} className="lg:hidden text-white" />
+        <NavbarContent className="md:hidden" justify="end">
+          <NavbarMenuToggle
+            aria-label={navOpenStatus ? "Close menu" : "Open menu"}
+            className="flex md:hidden order-3 text-white bg-[#0077b9] h-[2.5rem] w-[3.5rem]"
+          />
         </NavbarContent>
-
-        <NavbarContent className="hidden lg:flex" justify="start">
+        <NavbarContent className="hidden md:flex">
           <NavbarItem>
             <Link
               to="../Home"
@@ -180,8 +110,6 @@ const NavBar = () => {
               Call 562-667-4755
             </Link>
           </NavbarItem>
-        </NavbarContent>
-        <NavbarContent justify="end">
           <NavbarItem className="hidden lg:flex">
             <div className="flex flex-col gap-y-2">
               <Link to="../Auth">
@@ -197,74 +125,6 @@ const NavBar = () => {
             </div>
           </NavbarItem>
         </NavbarContent>
-        <NavbarMenu className="bg-[#28292b] mt-[1rem]">
-          {menuItems.map((item, index) => {
-            if (item === "Services") {
-              return (
-                <NavbarMenuItem key={`${item}-${index}`}>
-                  <Accordion className="p-0" isCompact>
-                    <AccordionItem
-                      aria-label={item}
-                      title={item}
-                      classNames={{ title: curTab === item ? "active" : "notActive", content: "text-white" }}
-                    >
-                      <Listbox aria-label="Services" color="warning">
-                        <ListboxItem key="Investment" className="p-0" textValue="Investment">
-                          <Link
-                            style={{ display: "block", padding: "6px 8px" }}
-                            to={"./Investment"}
-                            onClick={setIsMenuOpen}
-                          >
-                            Investment
-                          </Link>
-                        </ListboxItem>
-                        <ListboxItem key="Crypto" className="p-0" textValue="Crypto">
-                          <Link
-                            style={{ display: "block", padding: "6px 8px" }}
-                            to={"./Crypto"}
-                            onClick={setIsMenuOpen}
-                          >
-                            Crypto
-                          </Link>
-                        </ListboxItem>
-                        <ListboxItem key="Options" className="p-0" textValue="Options">
-                          <Link
-                            style={{ display: "block", padding: "6px 8px" }}
-                            to={"./Options"}
-                            onClick={setIsMenuOpen}
-                          >
-                            Options
-                          </Link>
-                        </ListboxItem>
-                        <ListboxItem key="Retirement" className="p-0" textValue="Retirement">
-                          <Link
-                            style={{ display: "block", padding: "6px 8px" }}
-                            to={"./Retirement"}
-                            onClick={setIsMenuOpen}
-                          >
-                            Retirement
-                          </Link>
-                        </ListboxItem>
-                      </Listbox>
-                    </AccordionItem>
-                  </Accordion>
-                </NavbarMenuItem>
-              );
-            } else {
-              return (
-                <NavbarMenuItem key={`${item}-${index}`}>
-                  <Link
-                    className={curTab === item ? "active" : "notActive"}
-                    to={index === 5 ? "../Auth" : `../${item}`}
-                    onClick={setIsMenuOpen}
-                  >
-                    {item}
-                  </Link>
-                </NavbarMenuItem>
-              );
-            }
-          })}
-        </NavbarMenu>
       </Navbar>
     </div>
   );
