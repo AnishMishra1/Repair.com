@@ -17,8 +17,6 @@ const Footer = () => {
           <ul>Wed: 8:00 AM – 8:00 PM</ul>
           <ul>Thu: 8:00 AM – 8:00 PM</ul>
           <ul>Fri: 8:00 AM – 8:00 PM</ul>
-          <ul>Sat: 8:00 AM – 8:00 PM</ul>
-          <ul>Sun: 8:00 AM – 8:00 PM</ul>
         </div>
       </div>
       <div className="flex flex-col justify-start items-start lg:px-[3rem] px-[1rem]">
@@ -31,8 +29,7 @@ const Footer = () => {
             1616 E Francis St, Suite G Ontario, <br />
             California 91761
           </ul>
-          <ul>(909)296-4817</ul>
-          <ul>(909)296-4817</ul>
+          <ul>(909) 316-5079</ul>
           <div className="py-[1rem]">
             <button className="bg-[red] font-bold py-[0.5rem] px-[1.5rem]">Blogs</button>
           </div>
