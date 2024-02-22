@@ -16,14 +16,17 @@ import {
   AccordionItem,
   Listbox,
   ListboxItem,
+  NavbarBrand,
+  Divider,
 } from "@nextui-org/react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { RiArrowDropDownLine } from "react-icons/ri";
-
+import { FaPhoneAlt } from "react-icons/fa";
+import { FaLocationPin } from "react-icons/fa6";
 // Local Files
 import "./NavBar.css";
-import logo from "../globalAssets/logo.svg";
+import logo from "../globalAssets/clipart2359735.png";
 import { RootState } from "../store/store";
 import { updateNavStatus } from "../store/navOpenStatusSlice";
 
@@ -39,186 +42,79 @@ const NavBar = () => {
   };
 
   return (
-    <div className="NavDiv">
+    <div className="fixed px-[0.4rem] md:px-[2rem] xl:px-[8rem] py-[1rem] w-full z-[500]">
       <Navbar
         isMenuOpen={navOpenStatus}
         onMenuOpenChange={setIsMenuOpen}
-        className="dark h-[5rem] nav bg-[#052814] p-0"
+        className="dark h-[1rem] nav md:px-[3rem] py-[1.5rem] bg-[#0077B9]"
         maxWidth="full"
       >
-        <NavbarContent>
-          <NavbarMenuToggle aria-label={navOpenStatus ? "Close menu" : "Open menu"} className="lg:hidden text-white" />
-          <Link to="../Home">
-            <Image width={150} src={logo} alt="logo" radius="none" className="hidden lg:block" />
-          </Link>
-          <div className="hbar hidden lg:block"></div>
-        </NavbarContent>
-        <NavbarContent className="lg:hidden logo">
-          <Link to="../Home">
-            <Image width={120} src={logo} alt="logo" radius="none" />
-          </Link>
-        </NavbarContent>
-
-        <NavbarContent className="hidden lg:flex" justify="center">
-          <NavbarItem>
-            <Link
-              to="../Home"
-              className={curTab === "Home" ? "active navActive flex flex-col px-[1rem]" : "notActive px-[1rem]"}
-            >
-              Home
+        <NavbarContent justify="start" className="">
+          <div className="flex flex-row justify-center items-center gap-x-[0.2rem]">
+            <Link to="../Home" className="">
+              <p className="text-white font-bold text-md md:text-xl w-[12rem]">PLUMBING & REPAIR</p>
             </Link>
-          </NavbarItem>
-
-          <Dropdown className="dark">
-            <NavbarItem
-              className={curTab === "Services" ? "navActiveServices flex-col hidden lg:flex" : "hidden lg:flex"}
-            >
-              <DropdownTrigger>
-                <Button
-                  disableRipple
-                  className={curTab === "Services" ? "active" : "notActive"}
-                  endContent={<RiArrowDropDownLine className="HomeDropdownIcon" />}
-                  radius="sm"
-                  variant="light"
-                  size="lg"
-                >
-                  Services
-                </Button>
-              </DropdownTrigger>
-            </NavbarItem>
-            <DropdownMenu aria-label="Services" className="gap-4 text-white font-['Roboto']">
-              <DropdownItem key="Investment" className="p-0" textValue="Investment">
-                <Link to="./Investment" style={{ display: "block", padding: "6px 8px" }}>
-                  Investment
-                </Link>
-              </DropdownItem>
-              <DropdownItem key="Crypto" className="p-0" textValue="Crypto">
-                <Link to="./Crypto" style={{ display: "block", padding: "6px 8px" }}>
-                  Crypto
-                </Link>
-              </DropdownItem>
-              <DropdownItem key="Options" className="p-0" textValue="Options">
-                <Link to="./Options" style={{ display: "block", padding: "6px 8px" }}>
-                  Options
-                </Link>
-              </DropdownItem>
-              <DropdownItem key="Retirement" className="p-0" textValue="Retirement">
-                <Link to="./Retirement" style={{ display: "block", padding: "6px 8px" }}>
-                  Retirement
-                </Link>
-              </DropdownItem>
-            </DropdownMenu>
-          </Dropdown>
-
-          <NavbarItem>
-            <Link
-              to="../About"
-              className={curTab === "About" ? "active navActive flex flex-col px-[1rem]" : "notActive px-[1rem]"}
-            >
-              About
-            </Link>
-          </NavbarItem>
-          <NavbarItem>
-            <Link
-              to="../Contact"
-              className={curTab === "Contact" ? "active navActive flex flex-col px-[1rem]" : "notActive px-[1rem]"}
-            >
-              Contact Us
-            </Link>
-          </NavbarItem>
-          <NavbarItem>
-            <Link
-              to="../FAQ"
-              className={curTab === "FAQ" ? "active navActive flex flex-col px-[1rem]" : "notActive px-[1rem]"}
-            >
-              FAQ
-            </Link>
-          </NavbarItem>
+            <div className="hbar lg:block"></div>
+            <p className="text-white  font-bold text-md md:text-xl mx-4 w-[10rem]">WE'RE OPEN</p>
+          </div>
         </NavbarContent>
         <NavbarContent justify="end">
-          <NavbarItem className="hidden lg:flex">
-            <Link to="../Auth">
-              <Button color="warning" variant="bordered" radius="none">
-                Login
-              </Button>
-            </Link>
-          </NavbarItem>
           <NavbarItem>
-            <Link to="../Auth">
-              <Button color="warning" variant="solid" radius="none" className="font-semibold">
-                Sign Up
+            <Link to="../Auth" className="hidden md:flex">
+              <Button color="warning" radius="sm" variant="shadow" startContent={<FaPhoneAlt />}>
+                (909) 316-5079
               </Button>
             </Link>
           </NavbarItem>
         </NavbarContent>
-        <NavbarMenu className="bg-[#28292b] mt-[1rem]">
-          {menuItems.map((item, index) => {
-            if (item === "Services") {
-              return (
-                <NavbarMenuItem key={`${item}-${index}`}>
-                  <Accordion className="p-0" isCompact>
-                    <AccordionItem
-                      aria-label={item}
-                      title={item}
-                      classNames={{ title: curTab === item ? "active" : "notActive", content: "text-white" }}
-                    >
-                      <Listbox aria-label="Services" color="warning">
-                        <ListboxItem key="Investment" className="p-0" textValue="Investment">
-                          <Link
-                            style={{ display: "block", padding: "6px 8px" }}
-                            to={"./Investment"}
-                            onClick={setIsMenuOpen}
-                          >
-                            Investment
-                          </Link>
-                        </ListboxItem>
-                        <ListboxItem key="Crypto" className="p-0" textValue="Crypto">
-                          <Link
-                            style={{ display: "block", padding: "6px 8px" }}
-                            to={"./Crypto"}
-                            onClick={setIsMenuOpen}
-                          >
-                            Crypto
-                          </Link>
-                        </ListboxItem>
-                        <ListboxItem key="Options" className="p-0" textValue="Options">
-                          <Link
-                            style={{ display: "block", padding: "6px 8px" }}
-                            to={"./Options"}
-                            onClick={setIsMenuOpen}
-                          >
-                            Options
-                          </Link>
-                        </ListboxItem>
-                        <ListboxItem key="Retirement" className="p-0" textValue="Retirement">
-                          <Link
-                            style={{ display: "block", padding: "6px 8px" }}
-                            to={"./Retirement"}
-                            onClick={setIsMenuOpen}
-                          >
-                            Retirement
-                          </Link>
-                        </ListboxItem>
-                      </Listbox>
-                    </AccordionItem>
-                  </Accordion>
-                </NavbarMenuItem>
-              );
-            } else {
-              return (
-                <NavbarMenuItem key={`${item}-${index}`}>
-                  <Link
-                    className={curTab === item ? "active" : "notActive"}
-                    to={index === 5 ? "../Auth" : `../${item}`}
-                    onClick={setIsMenuOpen}
-                  >
-                    {item}
-                  </Link>
-                </NavbarMenuItem>
-              );
-            }
-          })}
-        </NavbarMenu>
+      </Navbar>
+      <Navbar
+        isMenuOpen={navOpenStatus}
+        onMenuOpenChange={setIsMenuOpen}
+        className="dark h-[10rem] nav md:p-[1rem] lg:p-[3rem] rounded-lg bg-white"
+        maxWidth="full"
+      >
+        <NavbarBrand className="">
+          <Link to="../Home">
+            <Image width={120} src={logo} alt="logo" radius="none" className="" />
+          </Link>
+        </NavbarBrand>
+        <NavbarContent className="md:hidden" justify="end">
+          <NavbarMenuToggle
+            aria-label={navOpenStatus ? "Close menu" : "Open menu"}
+            className="order-3 text-white bg-[#0077b9] h-[2.5rem] w-[3.5rem] border-yellow-500 border-3"
+          />
+        </NavbarContent>
+        <NavbarContent className="hidden md:flex">
+          <NavbarItem>
+            <Link to="../Home" className="text-2xl text-[#0077b9] font-bold hidden md:flex">
+              <div className="flex flex-row gap-x-2 text-2xl">
+                <FaLocationPin className="text-red-600 mt-[0.1rem] " />
+                INLAND EMPIRE, CA
+              </div>
+            </Link>
+          </NavbarItem>
+          <Divider orientation="vertical" className="bg-[#0077b9]" />
+          <NavbarItem>
+            <Link to="../Contact" className="text-2xl text-[#0077b9] font-bold mr-5 hidden md:flex">
+              CALL (909) 316-5079
+            </Link>
+          </NavbarItem>
+          <NavbarItem className="hidden xl:flex">
+            <div className="flex flex-col gap-y-2">
+              <Link to="../Auth">
+                <Button
+                  color="warning"
+                  variant="bordered"
+                  radius="none"
+                  className="px-[3.9rem] bg-[#0077b9] text-white"
+                >
+                  CALL US NOW
+                </Button>
+              </Link>
+            </div>
+          </NavbarItem>
+        </NavbarContent>
       </Navbar>
     </div>
   );
