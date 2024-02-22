@@ -45,7 +45,7 @@ const NavBar = () => {
       <Navbar
         isMenuOpen={navOpenStatus}
         onMenuOpenChange={setIsMenuOpen}
-        className="dark h-[1rem] bg-white md:bg-transparent nav px-[3rem] py-[1.5rem] md:opacity-70 hidden md:flex"
+        className="dark h-[1rem] bg-white md:bg-transparent nav px-[3rem] py-[1.5rem] md:bg-[#0077B9] hidden md:flex"
         maxWidth="full"
       >
         <NavbarContent justify="start" className="">
@@ -60,13 +60,7 @@ const NavBar = () => {
         <NavbarContent justify="end">
           <NavbarItem>
             <Link to="../Auth">
-              <Button
-                color="warning"
-                variant="shadow"
-                radius="none"
-                startContent={<FaPhoneAlt />}
-                className="opacity-100 bg-[#0077b9]"
-              >
+              <Button color="warning" radius="sm" variant="shadow" startContent={<FaPhoneAlt />}>
                 (909) 316-5079
               </Button>
             </Link>
