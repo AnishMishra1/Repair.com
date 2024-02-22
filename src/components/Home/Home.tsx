@@ -11,6 +11,7 @@ import Youtube from "./subComponents/Youtube";
 import Testimonials from "./subComponents/Testimonials";
 import Protection from "./subComponents/Protection";
 import Join from "./subComponents/Join";
+import Card from "./subComponents/Card";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -25,6 +26,7 @@ const Home = () => {
     <div>
       {/* <Popover /> */}
       <HeroSection />
+      <Card/>
       <Help />
       <Join />
       <Protection />
