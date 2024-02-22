@@ -1,5 +1,5 @@
 .HeroSection {
-  min-height: 30rem;
+  min-height: 40rem;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5) 20%, rgba(0, 0, 0, 0.5)),
     url("https://img.freepik.com/free-photo/plumbing-professional-doing-his-job_23-2150721551.jpg?w=740&t=st=1708516282~exp=1708516882~hmac=7d5cb75fc164b2e53ffd82c21ebf7c8904bddd70ee420bbcb73562c89a9338d1");
   background-repeat: no-repeat;
