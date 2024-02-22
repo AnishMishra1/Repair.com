@@ -17,6 +17,7 @@ import {
   Listbox,
   ListboxItem,
   NavbarBrand,
+  Divider,
 } from "@nextui-org/react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
@@ -41,25 +42,25 @@ const NavBar = () => {
   };
 
   return (
-    <div className="fixed px-[0.4rem] md:px-[2rem] xl:px-[10rem] py-[1rem] w-full z-[500]">
+    <div className="fixed px-[0.4rem] md:px-[2rem] xl:px-[8rem] py-[1rem] w-full z-[500]">
       <Navbar
         isMenuOpen={navOpenStatus}
         onMenuOpenChange={setIsMenuOpen}
-        className="dark h-[1rem] bg-white md:bg-transparent nav px-[3rem] py-[1.5rem] md:bg-[#0077B9] hidden md:flex"
+        className="dark h-[1rem] nav md:px-[3rem] py-[1.5rem] bg-[#0077B9]"
         maxWidth="full"
       >
         <NavbarContent justify="start" className="">
           <div className="flex flex-row justify-center items-center gap-x-[0.2rem]">
-            <Link to="../Home" className="hidden md:flex">
-              <p className="text-white font-bold text-xl w-[12rem]">PLUMBING & REPAIR</p>
+            <Link to="../Home" className="">
+              <p className="text-white font-bold text-md md:text-xl w-[12rem]">PLUMBING & REPAIR</p>
             </Link>
-            <div className="hbar hidden lg:block"></div>
-            <p className="text-black md:text-white font-bold text-xl mx-4 w-[10rem]">WE'RE OPEN</p>
+            <div className="hbar lg:block"></div>
+            <p className="text-white  font-bold text-md md:text-xl mx-4 w-[10rem]">WE'RE OPEN</p>
           </div>
         </NavbarContent>
         <NavbarContent justify="end">
           <NavbarItem>
-            <Link to="../Auth">
+            <Link to="../Auth" className="hidden md:flex">
               <Button color="warning" radius="sm" variant="shadow" startContent={<FaPhoneAlt />}>
                 (909) 316-5079
               </Button>
@@ -70,41 +71,36 @@ const NavBar = () => {
       <Navbar
         isMenuOpen={navOpenStatus}
         onMenuOpenChange={setIsMenuOpen}
-        className="dark h-[10rem] nav md:p-[3rem] rounded-lg bg-white justify-between"
+        className="dark h-[10rem] nav md:p-[1rem] lg:p-[3rem] rounded-lg bg-white"
         maxWidth="full"
       >
-        <NavbarBrand>
+        <NavbarBrand className="">
           <Link to="../Home">
-            <Image width={80} src={logo} alt="logo" radius="none" className="" />
+            <Image width={120} src={logo} alt="logo" radius="none" className="" />
           </Link>
         </NavbarBrand>
         <NavbarContent className="md:hidden" justify="end">
           <NavbarMenuToggle
             aria-label={navOpenStatus ? "Close menu" : "Open menu"}
-            className="flex md:hidden order-3 text-white bg-[#0077b9] h-[2.5rem] w-[3.5rem]"
+            className="order-3 text-white bg-[#0077b9] h-[2.5rem] w-[3.5rem] border-yellow-500 border-3"
           />
         </NavbarContent>
         <NavbarContent className="hidden md:flex">
           <NavbarItem>
-            <Link
-              to="../Home"
-              className={curTab === "Home" ? "active navActive flex flex-col px-[1rem]" : "notActive px-[1rem]"}
-            >
-              <div className="flex flex-row gap-x-6">
-                <FaLocationPin className="text-red-600" />
+            <Link to="../Home" className="text-2xl text-[#0077b9] font-bold hidden md:flex">
+              <div className="flex flex-row gap-x-2 text-2xl">
+                <FaLocationPin className="text-red-600 mt-[0.1rem] " />
                 INLAND EMPIRE, CA
               </div>
             </Link>
           </NavbarItem>
+          <Divider orientation="vertical" className="bg-[#0077b9]" />
           <NavbarItem>
-            <Link
-              to="../Contact"
-              className={curTab === "Contact" ? "active navActive flex flex-col px-[1rem]" : "notActive px-[1rem]"}
-            >
-              Call 562-667-4755
+            <Link to="../Contact" className="text-2xl text-[#0077b9] font-bold mr-5 hidden md:flex">
+              CALL (909) 316-5079
             </Link>
           </NavbarItem>
-          <NavbarItem className="hidden lg:flex">
+          <NavbarItem className="hidden xl:flex">
             <div className="flex flex-col gap-y-2">
               <Link to="../Auth">
                 <Button
