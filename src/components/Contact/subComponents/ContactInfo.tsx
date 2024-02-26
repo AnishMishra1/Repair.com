@@ -12,7 +12,7 @@ const ContactInfo = () => {
           <Button isIconOnly variant="flat" radius="full" size="sm">
             <FaPhone />
           </Button>
-          <p>+1 (888) 891-7176</p>
+          <p>+1 (844) 671-7475</p>
         </div>
         <p>Call us today for expert investment guidance and personalized assistance!</p>
       </div>

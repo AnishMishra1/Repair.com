@@ -39,7 +39,7 @@
             "Select your account type",
             "Complete the application",
             "Commence funding and investing",
-            "Contact us at +1 (888) 891-7176 ",
+            "Contact us at +1 (844) 671-7475 ",
             "Locate a branch"
           ]
         },
@@ -55,8 +55,8 @@
           "main": "In the context of investments, risk refers to the uncertainty or potential for financial loss.",
           "points": [
             "It encompasses the possibility that an investment may not perform as expected, leading to a negative impact on the investor's capital.",
-          "Various factors contribute to investment risk, including market fluctuations, economic conditions, and specific characteristics of the investment itself."]
-
+            "Various factors contribute to investment risk, including market fluctuations, economic conditions, and specific characteristics of the investment itself."
+          ]
         },
         "bullet": false
       }
@@ -79,9 +79,7 @@
       {
         "data": {
           "main": "What is the relationship between risk and return in investments?",
-          "points": [
-            ""
-          ]
+          "points": [""]
         },
         "bullet": false
       }
