@@ -9,7 +9,7 @@ import "./HeroSection.css";
 
 const HeroSection = () => {
   return (
-    <div className="HeroSection flex flex-col justify-center items-center">
+    <div className="robin-HeroSection flex flex-col justify-center items-center">
       <div className="flex flex-col justify-center items-center gap-[1rem] w-[100%] px-[3rem] py-[2rem]">
         <GiProgression className="text-white text-[5rem] txtShadow" />
         <p className="txtShadow text-[white] text-2xl font-semibold">InvestNow Retirement</p>
@@ -30,7 +30,7 @@ const HeroSection = () => {
         </p>
 
         <p className="text-default-200 flex txtShadow gap-[0.5rem]">
-          <IoIosInformationCircle className="mt-[0.3rem]"/> Limitations and terms apply
+          <IoIosInformationCircle className="mt-[0.3rem]" /> Limitations and terms apply
         </p>
 
         <Button
